@@ -47,7 +47,6 @@ create table public.alumnos (
   curso integer null,
   "rolId" bigint not null default '1'::bigint,
   "ciudadId" bigint not null default '1'::bigint,
-  nombre_completo character varying null,
   constraint alumnos_pkey primary key (id),
   constraint alumnos_escuelaId_fkey foreign KEY ("escuelaId") references escuelas (id) on update RESTRICT on delete RESTRICT,
   constraint alumnos_rolId_fkey foreign KEY ("rolId") references rol (id),
